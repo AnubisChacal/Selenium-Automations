@@ -14,7 +14,7 @@ navegador = webdriver.Chrome(service=servico)
 
 
 #atribuindo funções pasando o xpath
-navegador.get ("https://on.fiap.com.br/")
+navegador.get ("https://-----/")
 navegador.find_element('xpath','//*[@id="username"]').send_keys("------")
 navegador.find_element('xpath','//*[@id="password"]').send_keys("------")
 navegador.find_element('xpath','//*[@id="loginbtn"]').click()
