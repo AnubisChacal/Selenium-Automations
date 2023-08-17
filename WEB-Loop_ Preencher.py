@@ -6,27 +6,26 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
 
-
 #definindo parametros de serviços
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
 
 
-
 #atribuindo funções pasando o xpath
 navegador.get ("https://on.fiap.com.br/")
-navegador.find_element('xpath','//*[@id="username"]').send_keys("cl2182")
-navegador.find_element('xpath','//*[@id="password"]').send_keys("g@br!el#23")
+navegador.find_element('xpath','//*[@id="username"]').send_keys("------")
+navegador.find_element('xpath','//*[@id="password"]').send_keys("------")
 navegador.find_element('xpath','//*[@id="loginbtn"]').click()
-navegador.get ("https://on.fiap.com.br/local/fiapdb/admin/add_conteudo_fake.php")
+navegador.get ("-------------------------------------------------")
 
 
+# lista de arquivos para o loop | Caminho absoluto
 arquivos = ['C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//1SI//100 - 1SI - Fase 6 - 2023.csv',
             'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//2SI//100 - 2SI - Fase 6 - 2023.csv',
             'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//3SI//100 - 3SI - Fase 6 - 2023.csv',
             'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//4SI//100 - 4SI - Fase 6 - 2023.csv']
 
-
+# Loop de paginas e arquivos para preencher as infos das paginas 
 for arquivo in arquivos:
     navegador.find_element('xpath','/html/body/div[5]/div/div/div/section/div/div/form/div[5]/div[2]/div[1]/label/input').click()
     navegador.find_element('xpath','/html/body/div[5]/div/div/div/section/div/div/form/div[6]/div[2]/div[1]/label/input').click()
@@ -55,5 +54,7 @@ for arquivo in arquivos:
             caixa_texto = navegador.find_element('xpath', '//*[@id="id_conteudoname_{}"]'.format(index)).send_keys(conteudo)
 
 
-    time.sleep(5)
+  
+# Salvar infos nas paginas 
+# OBS: Retorno do loop
     navegador.find_element('xpath','//*[@id="id_submitbutton"]').click()
