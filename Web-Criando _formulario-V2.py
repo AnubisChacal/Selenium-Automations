@@ -1,3 +1,5 @@
+#As aréas em trasejados estão assim por segurança
+
 #Import das bibliotecas
 import time
 import csv
@@ -14,22 +16,25 @@ navegador = webdriver.Chrome(service=servico)
 
 #atribuindo funções pasando o xpath
 navegador.get ("https://on.fiap.com.br/")                                          #= entando no site
-navegador.find_element('xpath','//*[@id="username"]').send_keys("cl2182")          #= passando user
-navegador.find_element('xpath','//*[@id="password"]').send_keys("g@br!el#23")      #= passando a senha
+navegador.find_element('xpath','//*[@id="username"]').send_keys("-----")          #= passando user
+navegador.find_element('xpath','//*[@id="password"]').send_keys("-----")      #= passando a senha
 navegador.find_element('xpath','//*[@id="loginbtn"]').click()                      #= logando
 #====================================================================================
 
 
-links = ['https://on.fiap.com.br/course/edit.php?category=1541&returnto=catmanage',#1SI
-         'https://on.fiap.com.br/course/edit.php?category=1542&returnto=catmanage',#2SI
-         'https://on.fiap.com.br/course/edit.php?category=1543&returnto=catmanage',#3SI
-         'https://on.fiap.com.br/course/edit.php?category=1544&returnto=catmanage',]#4SI
+# Listas 
+links = ['https://-----/course/edit.php?category=-----&returnto=catmanage',
+         'https://-----/course/edit.php?category=-----&returnto=catmanage',
+         'https://-----/course/edit.php?category=-----&returnto=catmanage',
+         'https://-----/course/edit.php?category=-----returnto=catmanage',]
 
-arquivos = ['C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//criar_curso//1SI//100GRAD1SIFASE6-2023.csv',#1SI
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//criar_curso//2SI//100GRAD2SIFASE6-2023.csv',#2SI
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//criar_curso//3SI//100GRAD3SIFASE6-2023.csv', #3SI
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//criar_curso//4SI//100GRAD4SIFASE6-2023.csv', ]#4SI
+arquivos = ['C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//criar_curso//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//criar_curso//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//criar_curso//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//criar_curso//-----//-----', ]
 
+
+#Preenchimento de infos das paginas por meio de expreções expecificas e infos dos arquivos das listas 
 for link, arquivo in zip(links, arquivos):
     navegador.get(link)
 
@@ -81,5 +86,5 @@ for link, arquivo in zip(links, arquivos):
             .send_keys(nome_tabela)
     
     
-    
+    #Salva e retorna o loop até o termino das listas
     navegador.find_element('xpath','/html/body/div[5]/div/div/div/section/div/div/form/div[3]/div[2]/div[1]/span/input').click()
