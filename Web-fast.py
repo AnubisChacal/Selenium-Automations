@@ -1,3 +1,5 @@
+#As areas com trasejados estão assim por motivos de segurança
+
 #Import das bibliotecas
 import time
 import csv
@@ -14,22 +16,23 @@ servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
 
 #atribuindo funções pasando o xpath
-navegador.get ("https://on.fiap.com.br/")                                          #= entando no site
-navegador.find_element('xpath','//*[@id="username"]').send_keys("cl2182")          #= passando user
-navegador.find_element('xpath','//*[@id="password"]').send_keys("g@br!el#23")      #= passando a senha
+navegador.get ("https://-----/")                                          #= entando no site
+navegador.find_element('xpath','//*[@id="username"]').send_keys("-----")          #= passando user
+navegador.find_element('xpath','//*[@id="password"]').send_keys("-----")      #= passando a senha
 navegador.find_element('xpath','//*[@id="loginbtn"]').click()                      #= logando
 #====================================================================================
 
+#Listas de links e arquivos
 links = [
-    'https://on.fiap.com.br/course/modedit.php?add=quiz&type=&course=9596&section=0&return=0&sr=0',
-      'https://on.fiap.com.br/course/modedit.php?add=quiz&type=&course=9597&section=0&return=0&sr=0',
-      'https://on.fiap.com.br/course/modedit.php?add=quiz&type=&course=9598&section=0&return=0&sr=0',
-      'https://on.fiap.com.br/course/modedit.php?add=quiz&type=&course=9599&section=0&return=0&sr=0']  # 4SI
+    'https://-----/course/modedit.php?add=quiz&type=&course=-----&section=0&return=0&sr=0',
+      'https://-----/course/modedit.php?add=quiz&type=&course=-----&section=0&return=0&sr=0',
+      'https://-----/course/modedit.php?add=quiz&type=&course=-----&section=0&return=0&sr=0',
+      'https://-----/course/modedit.php?add=quiz&type=&course=-----&section=0&return=0&sr=0'] 
 
-arquivos = ['C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//1SI//100 - 1SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//2SI//100 - 2SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//3SI//100 - 3SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//4SI//100 - 4SI - Fase 6 - 2023.csv']
+arquivos = ['C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//-----',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//-----']
 
 for link, arquivo in zip(links, arquivos):
     navegador.get(link)
@@ -87,11 +90,7 @@ arquivo.close()
 # Fechar o driver do Selenium
 navegador.quit()
 
-
-
-
-time.sleep(10)
-
+#salva e retorna para o loop
 navegador.find_element('xpath','/html/body/div[7]/div/div/div/section/div/div/form/div[2]/a').click()
 
 navegador.find_element('xpath','//*[@id="id_name"]').send_keys("Fast test")
