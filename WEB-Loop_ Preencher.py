@@ -1,3 +1,5 @@
+#As aréas em trasados estão assim por motivos de segurança
+
 #Import das bibliotecas
 import time
 import csv
@@ -20,10 +22,10 @@ navegador.get ("-------------------------------------------------")
 
 
 # lista de arquivos para o loop | Caminho absoluto
-arquivos = ['C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//1SI//100 - 1SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//2SI//100 - 2SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//3SI//100 - 3SI - Fase 6 - 2023.csv',
-            'C://Users//Anubis//OneDrive//Área de Trabalho//Documentos//Aperta o X//Projetos//Python//WEB - Automação//4SI//100 - 4SI - Fase 6 - 2023.csv']
+arquivos = ['C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//100 - ----- - Fase 6 - 2023.csv',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//100 - ----- - Fase 6 - 2023.csv',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//100 - ----- - Fase 6 - 2023.csv',
+            'C://Users//-----//OneDrive//Área de Trabalho//Documentos//-----//Projetos//Python//WEB - Automação//-----//100 - ----- - Fase 6 - 2023.csv']
 
 # Loop de paginas e arquivos para preencher as infos das paginas 
 for arquivo in arquivos:
