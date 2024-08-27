@@ -1,54 +1,78 @@
-# 🌐 Projetos de Automação de Preenchimento
+# Projeto de Automação Web com Selenium
 
-Este repositório contém três projetos de automação desenvolvidos para automatizar processos de preenchimento em uma plataforma web. Cada projeto lida com diferentes cenários de preenchimento. Abaixo estão as descrições de cada um deles:
+Este projeto consiste em três scripts Python que utilizam a biblioteca Selenium para automatizar interações com uma aplicação web específica. Os scripts realizam diferentes tarefas, como preenchimento de formulários, envio de dados a partir de arquivos CSV e navegação entre páginas.
 
-## ⭐️ Projeto 1 - Preenchimento de Informações
+## Estrutura dos Scripts
 
-Este projeto automatiza o preenchimento de informações em páginas web. Ele se concentra em selecionar opções, preencher campos e submeter formulários.
+### 1. Script 1: `Projeto1.py`
+Este script automatiza o preenchimento e envio de formulários para a criação de cursos em uma plataforma web.
 
-### 📋 Recursos e Tecnologias
+- **Funcionalidades:**
+  - Realiza login na plataforma.
+  - Navega para as páginas de criação de curso.
+  - Preenche dados do curso como data de início, data de término, e regras específicas.
+  - Lê dados de um arquivo CSV para preencher informações adicionais do curso.
+  - Submete o formulário e repete o processo para outros cursos listados.
 
-- Python
-- Selenium
-- WebDriver Manager
-- CSV
+### 2. Script 2: `Projeto2.py`
+Este script é utilizado para criar quizzes em uma plataforma online.
 
-### 🔧 Como Usar
+- **Funcionalidades:**
+  - Realiza login na plataforma.
+  - Navega para as páginas de criação de quizzes.
+  - Lê dados de um arquivo CSV para preencher as informações do quiz, como nome, datas de início e término.
+  - Preenche automaticamente as datas e horários de abertura e fechamento do quiz.
+  - Submete o formulário e repete o processo para outros quizzes listados.
 
-1. Instale as dependências listadas no arquivo `requirements.txt`.
-2. Substitua as áreas marcadas por `Sua Descrição Aqui` com informações relevantes.
-3. Execute o arquivo `projeto1.py`.
+### 3. Script 3: `Projeto3.py`
+Este script automatiza o preenchimento de formulários com base em dados de arquivos CSV e faz upload desses dados em várias páginas da plataforma.
 
-## ⭐️ Projeto 2 - Automatização de Preenchimento Detalhado
+- **Funcionalidades:**
+  - Realiza login na plataforma.
+  - Carrega e navega em múltiplas páginas onde os dados devem ser inseridos.
+  - Lê arquivos CSV para extrair e inserir dados nos campos de formulário.
+  - Itera através de várias páginas e arquivos para completar as tarefas automatizadas.
 
-Neste projeto, a automação é usada para preencher informações detalhadas em páginas web. Ele utiliza um arquivo CSV para preencher campos e realizar ações com base nas informações necessarias da pagina web.
+## Requisitos
 
-### 📋 Recursos e Tecnologias
+- **Python 3.x**
+- **Selenium** (`pip install selenium`)
+- **webdriver_manager** (`pip install webdriver_manager`)
 
-- Python
-- Selenium
-- WebDriver Manager
-- CSV
+## Como Usar
 
-### 🔧 Como Usar
+1. **Configuração do ambiente:**
+   - Certifique-se de ter o Python 3.x instalado.
+   - Instale as dependências necessárias usando pip:
+     ```bash
+     pip install selenium webdriver_manager
+     ```
 
-1. Instale as dependências listadas no arquivo `requirements.txt`.
-2. Coloque seus arquivos CSV em uma pasta específica e atualize os caminhos no código.
-3. Execute o arquivo `projeto2.py`.
+2. **Execução dos Scripts:**
+   - Cada script pode ser executado individualmente.
+   - Assegure-se de que os arquivos CSV mencionados nos scripts estejam presentes nos caminhos especificados.
+   - Execute o script desejado usando o comando:
+     ```bash
+     python Projeto1.py
+     ```
+     ou
+     ```bash
+     python Projeto2.py
+     ```
+     ou
+     ```bash
+     python Projeto3.py
+     ```
 
-## ⭐️ Projeto 3 - Preenchimento e Submissão em Massa
+3. **Personalização:**
+   - Edite os scripts para modificar os caminhos dos arquivos, URLs, e outras informações necessárias para a automação funcionar corretamente em seu ambiente.
 
-O terceiro projeto automatiza o preenchimento e a submissão em massa de informações. Ele utiliza o Selenium para lidar com múltiplos elementos de entrada e realizar ações em um loop.
+## Observações
 
-### 📋 Recursos e Tecnologias
+- As áreas com informações sensíveis foram omitidas ou substituídas por "-----" por questões de segurança.
+- Certifique-se de atualizar os detalhes como credenciais de login, URLs, e caminhos de arquivos antes de executar os scripts.
 
-- Python
-- Selenium
-- WebDriver Manager
-- CSV
+## Licença
 
-### 🔧 Como Usar
+Este projeto é licenciado sob a [MIT License](LICENSE).
 
-1. Instale as dependências listadas no arquivo `requirements.txt`.
-2. Coloque seus arquivos CSV em uma pasta específica e atualize os caminhos no código.
-3. Execute o arquivo `projeto3.py`.
